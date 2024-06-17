@@ -1,6 +1,9 @@
-site_name: "Documentação do Meu Projeto Terraform"
+site_name: "Terraform Build infrastructure"
 theme:
   name: "material"
 nav:
-  - Home: index.md
-  - Sobre: about.md
+  - Introduction: index.md
+  - Structures: structure.md
+  - Setup: setup.md
+  - Steps: steps.md
+  - Outputs: outputs.md
