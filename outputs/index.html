@@ -1,0 +1,673 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../steps/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Outputs - Terraform Build infrastructure</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#outputs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Terraform Build infrastructure" class="md-header__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Terraform Build infrastructure
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Outputs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Terraform Build infrastructure" class="md-nav__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Terraform Build infrastructure
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../steps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Steps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Outputs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Outputs
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#evidencias-do-passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências do Passo a Passo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evidências do Passo a Passo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-verificando-a-instalacao-do-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Verificando a Instalação do Terraform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verificando-a-instalacao-do-aws-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verificando a Instalação do AWS CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-criando-o-arquivo-maintf" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Criando o Arquivo main.tf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-inicializando-o-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Inicializando o Terraform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-planejando-a-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Planejando a Infraestrutura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-aplicando-a-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Aplicando a Configuração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-verificando-a-instancia-na-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Verificando a Instância na AWS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-limpando-a-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Limpando a Infraestrutura
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#evidencias-do-passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências do Passo a Passo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evidências do Passo a Passo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-verificando-a-instalacao-do-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Verificando a Instalação do Terraform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verificando-a-instalacao-do-aws-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verificando a Instalação do AWS CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-criando-o-arquivo-maintf" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Criando o Arquivo main.tf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-inicializando-o-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Inicializando o Terraform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-planejando-a-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Planejando a Infraestrutura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-aplicando-a-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Aplicando a Configuração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-verificando-a-instancia-na-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Verificando a Instância na AWS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-limpando-a-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Limpando a Infraestrutura
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="outputs">Outputs</h1>
+<h2 id="evidencias-do-passo-a-passo">Evidências do Passo a Passo</h2>
+<h3 id="1-verificando-a-instalacao-do-terraform">1. Verificando a Instalação do Terraform</h3>
+<p>Após instalar o Terraform, você pode verificar a instalação executando o comando <code>terraform -v</code>. </p>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-sh">terraform -v
+</code></pre>
+<p><strong>Descrição do Print:</strong>
+Este print mostra a versão do Terraform instalada no seu sistema, confirmando que a instalação foi bem-sucedida.</p>
+<p><img alt="Verificação do Terraform" src="https://i.ibb.co/b7THZqL/terraform-version.png" /></p>
+<hr />
+<h3 id="2-verificando-a-instalacao-do-aws-cli">2. Verificando a Instalação do AWS CLI</h3>
+<p>Depois de instalar o AWS CLI, você pode verificar a instalação executando o comando <code>aws --version</code>.</p>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-sh">aws --version
+</code></pre>
+<p><strong>Descrição do Print:</strong>
+Este print mostra a versão do AWS CLI instalada, garantindo que a instalação foi concluída corretamente.</p>
+<p><img alt="Verificação do AWS CLI" src="https://i.ibb.co/ZHq4JXT/aws-version.png" /></p>
+<hr />
+<h3 id="3-criando-o-arquivo-maintf">3. Criando o Arquivo main.tf</h3>
+<p>Crie um arquivo de configuração Terraform chamado <code>main.tf</code> com o seguinte conteúdo:</p>
+<pre><code class="language-hcl">provider &quot;aws&quot; {
+  region = &quot;us-east-1&quot;
+}
+
+resource &quot;aws_instance&quot; &quot;example&quot; {
+  ami           = &quot;ami-0c02fb55956c7d316&quot;  # Amazon Linux 2 AMI (HVM), SSD Volume Type
+  instance_type = &quot;t2.micro&quot;
+
+  tags = {
+    Name = &quot;TerraformExample&quot;
+  }
+}
+</code></pre>
+<p><strong>Descrição do Print:</strong>
+Este print mostra o conteúdo do arquivo <code>main.tf</code> criado no seu editor de texto.</p>
+<p><img alt="Arquivo main.tf" src="https://i.ibb.co/bvfVtfF/main-archive.png" /></p>
+<hr />
+<h3 id="4-inicializando-o-terraform">4. Inicializando o Terraform</h3>
+<p>Inicialize o Terraform executando o comando <code>terraform init</code> no diretório onde está o arquivo <code>main.tf</code>.</p>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-sh">terraform init
+</code></pre>
+<p><strong>Descrição do Print:</strong>
+Este print mostra a saída do comando <code>terraform init</code>, indicando que o Terraform foi inicializado com sucesso.</p>
+<p><img alt="Inicialização do Terraform" src="https://i.ibb.co/b3hjBfm/terraform-init.png" /></p>
+<hr />
+<h3 id="5-planejando-a-infraestrutura">5. Planejando a Infraestrutura</h3>
+<p>Execute o comando <code>terraform plan</code> para ver o que será criado.</p>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-sh">terraform plan
+</code></pre>
+<p><strong>Descrição do Print:</strong>
+Este print mostra a saída do comando <code>terraform plan</code>, detalhando os recursos que serão criados.</p>
+<p><img alt="Planejamento da Infraestrutura" src="https://i.ibb.co/RP8Ys4v/terraform-plan.png" /></p>
+<hr />
+<h3 id="6-aplicando-a-configuracao">6. Aplicando a Configuração</h3>
+<p>Para criar a instância EC2, execute o comando <code>terraform apply</code> e digite <code>yes</code> quando solicitado.</p>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-sh">terraform apply
+</code></pre>
+<p><strong>Descrição do Print:</strong>
+Este print mostra a saída do comando <code>terraform apply</code>, indicando a criação bem-sucedida da instância EC2.</p>
+<p><img alt="Aplicação da Configuração" src="https://i.ibb.co/ZM2DSRm/terraform-apply.png" /></p>
+<hr />
+<h3 id="7-verificando-a-instancia-na-aws">7. Verificando a Instância na AWS</h3>
+<p>Para verificar se a instância foi criada, acesse o AWS Management Console, navegue até o serviço EC2 e confira a lista de instâncias.</p>
+<p><strong>Descrição do Print:</strong>
+Este print mostra a instância EC2 criada na AWS. Ele inclui detalhes como o ID da instância, tipo de instância, estado e nome ("TerraformExample").</p>
+<p><img alt="Verificando EC2" src="https://i.ibb.co/dBJ7GYd/verify-ec2.png" /></p>
+<hr />
+<h3 id="8-limpando-a-infraestrutura">8. Limpando a Infraestrutura</h3>
+<p>Para destruir a instância criada, execute o comando <code>terraform destroy</code> e digite <code>yes</code> quando solicitado.</p>
+<p><strong>Comando:</strong></p>
+<pre><code class="language-sh">terraform destroy
+</code></pre>
+<p><strong>Descrição do Print:</strong>
+Este print mostra a saída do comando <code>terraform destroy</code>, indicando a destruição bem-sucedida da instância EC2.</p>
+<p><img alt="Destruição da Infraestrutura" src="https://i.ibb.co/fx2ZGs7/terraform-destroy.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
