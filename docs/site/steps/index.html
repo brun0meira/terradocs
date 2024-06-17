@@ -9,18 +9,22 @@
       
       
       
+        <link rel="prev" href="../setup/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../outputs/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Terraform Build infrastructure</title>
+        <title>Steps - Terraform Build infrastructure</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
       
 
@@ -39,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#passo-a-passo" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Terraform Build infrastructure" class="md-header__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
+    <a href=".." title="Terraform Build infrastructure" class="md-header__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -89,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Steps
             
           </span>
         </div>
@@ -164,7 +173,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Terraform Build infrastructure" class="md-nav__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
+    <a href=".." title="Terraform Build infrastructure" class="md-nav__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -182,7 +191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -202,7 +211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/structure/" class="md-nav__link">
+      <a href="../structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -222,7 +231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/setup/" class="md-nav__link">
+      <a href="../setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -239,10 +248,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/steps/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Steps
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -251,6 +280,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#criando-uma-instancia-ec2-com-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando uma Instância EC2 com Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializando-o-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicializando o Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planejando-a-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planejando a Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicando-a-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicando a Configuração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolvendo-erros-de-ami" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolvendo Erros de AMI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpando-a-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpando a Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -262,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/outputs/" class="md-nav__link">
+      <a href="../outputs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -292,6 +395,70 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#criando-uma-instancia-ec2-com-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando uma Instância EC2 com Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializando-o-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicializando o Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planejando-a-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planejando a Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicando-a-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicando a Configuração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolvendo-erros-de-ami" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolvendo Erros de AMI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpando-a-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limpando a Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -303,8 +470,80 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="passo-a-passo">Passo a Passo</h1>
+<p>Este tutorial oferece uma introdução detalhada ao uso do Terraform para provisionar infraestrutura na AWS. Ao seguir esses passos, você poderá criar e gerenciar uma instância EC2 na AWS.</p>
+<h2 id="criando-uma-instancia-ec2-com-terraform">Criando uma Instância EC2 com Terraform</h2>
+<ol>
+<li>Crie um arquivo de configuração Terraform chamado <code>main.tf</code> com o seguinte conteúdo:</li>
+</ol>
+<pre><code class="language-hcl">    provider &quot;aws&quot; {
+        region = &quot;us-east-1&quot;
+    }
+
+    resource &quot;aws_instance&quot; &quot;example&quot; {
+        ami           = &quot;ami-0c02fb55956c7d316&quot;  # Amazon Linux 2 AMI (HVM), SSD Volume Type
+        instance_type = &quot;t2.micro&quot;
+
+    tags = {
+        Name = &quot;TerraformExample&quot;
+    }
+    }
+</code></pre>
+<h2 id="inicializando-o-terraform">Inicializando o Terraform</h2>
+<ol>
+<li>Abra o terminal no diretório onde está o arquivo <code>main.tf</code> e execute:</li>
+</ol>
+<pre><code class="language-bash">terraform init
+</code></pre>
+<h2 id="planejando-a-infraestrutura">Planejando a Infraestrutura</h2>
+<ol>
+<li>Para ver o que será criado, execute:</li>
+</ol>
+<pre><code class="language-bash">terraform plan
+</code></pre>
+<h2 id="aplicando-a-configuracao">Aplicando a Configuração</h2>
+<ol>
+<li>Para criar a instância EC2, execute:</li>
+</ol>
+<pre><code class="language-bash">terraform apply
+</code></pre>
+<ol>
+<li>Digite <code>yes</code> quando solicitado para confirmar a aplicação da configuração.</li>
+</ol>
+<h2 id="resolvendo-erros-de-ami">Resolvendo Erros de AMI</h2>
+<ol>
+<li>Se você encontrar o erro <code>InvalidAMIID.NotFound</code>, significa que o ID da AMI não é válido para a região especificada. Para encontrar uma AMI válida, você pode usar o comando AWS CLI:</li>
+</ol>
+<pre><code class="language-bash">aws ec2 describe-images --owners amazon --filters &quot;Name=name,Values=amzn2-ami-hvm-2.0.????????-x86_64-gp2&quot;
+</code></pre>
+<ol>
+<li>Isso retornará uma lista de AMIs válidas que você pode usar. Substitua o ID da AMI em seu arquivo <code>main.tf</code> por uma das AMIs listadas.</li>
+</ol>
+<h2 id="limpando-a-infraestrutura">Limpando a Infraestrutura</h2>
+<ol>
+<li>Para destruir a instância criada, execute:</li>
+</ol>
+<pre><code class="language-bash">terraform destroy
+</code></pre>
+<ol>
+<li>Digite <code>yes</code> quando solicitado para confirmar a destruição da infraestrutura.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -338,10 +577,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

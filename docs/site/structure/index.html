@@ -9,18 +9,22 @@
       
       
       
+        <link rel="prev" href="..">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../setup/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Terraform Build infrastructure</title>
+        <title>Structures - Terraform Build infrastructure</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
       
 
@@ -39,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#estrutura-do-projeto-com-terraform" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Terraform Build infrastructure" class="md-header__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
+    <a href=".." title="Terraform Build infrastructure" class="md-header__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -89,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Structures
             
           </span>
         </div>
@@ -164,7 +173,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Terraform Build infrastructure" class="md-nav__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
+    <a href=".." title="Terraform Build infrastructure" class="md-nav__button md-logo" aria-label="Terraform Build infrastructure" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -182,7 +191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -199,10 +208,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/structure/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Structures
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -211,6 +240,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diretorios-e-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diretórios e Arquivos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diretórios e Arquivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descricao-dos-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição dos Arquivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conteudo-do-arquivo-maintf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteúdo do Arquivo main.tf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conteudo-do-arquivo-variablestf-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteúdo do Arquivo variables.tf (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conteudo-do-arquivo-outputstf-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteúdo do Arquivo outputs.tf (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -222,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/setup/" class="md-nav__link">
+      <a href="../setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -242,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/steps/" class="md-nav__link">
+      <a href="../steps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -262,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/outputs/" class="md-nav__link">
+      <a href="../outputs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -292,6 +392,67 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diretorios-e-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diretórios e Arquivos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diretórios e Arquivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descricao-dos-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição dos Arquivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conteudo-do-arquivo-maintf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteúdo do Arquivo main.tf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conteudo-do-arquivo-variablestf-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteúdo do Arquivo variables.tf (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conteudo-do-arquivo-outputstf-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteúdo do Arquivo outputs.tf (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -303,8 +464,72 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="estrutura-do-projeto-com-terraform">Estrutura do Projeto com Terraform</h1>
+<h2 id="diretorios-e-arquivos">Diretórios e Arquivos</h2>
+<p>Para organizar seu projeto Terraform, você precisará de alguns diretórios e arquivos básicos. Aqui está uma estrutura sugerida:</p>
+<pre><code>/meu-projeto-terraform
+    ├── main.tf
+    ├── variables.tf
+    ├── outputs.tf
+    └── .terraform/
+</code></pre>
+<h3 id="descricao-dos-arquivos">Descrição dos Arquivos</h3>
+<ul>
+<li><strong>main.tf</strong>: Este é o arquivo principal onde você define os recursos da infraestrutura. Neste tutorial, ele conterá a definição da instância EC2.</li>
+<li><strong>variables.tf</strong> (opcional): Defina variáveis para parametrizar sua configuração. Isso ajuda a tornar seu código mais modular e reutilizável.</li>
+<li><strong>outputs.tf</strong> (opcional): Defina saídas para obter informações sobre os recursos provisionados, como o endereço IP da instância EC2.</li>
+<li><strong>.terraform/</strong>: Diretório criado automaticamente pelo Terraform para armazenar arquivos de estado e cache.</li>
+</ul>
+<h3 id="conteudo-do-arquivo-maintf">Conteúdo do Arquivo main.tf</h3>
+<pre><code class="language-hcl">provider &quot;aws&quot; {
+  region = &quot;us-east-1&quot;
+}
+
+resource &quot;aws_instance&quot; &quot;example&quot; {
+  ami           = &quot;ami-0c02fb55956c7d316&quot;  # Amazon Linux 2 AMI (HVM), SSD Volume Type
+  instance_type = &quot;t2.micro&quot;
+
+  tags = {
+    Name = &quot;TerraformExample&quot;
+  }
+}
+</code></pre>
+<p>Neste arquivo, você especifica o provedor AWS e define um recurso de instância EC2 com a imagem AMI e o tipo de instância.</p>
+<h3 id="conteudo-do-arquivo-variablestf-opcional">Conteúdo do Arquivo variables.tf (Opcional)</h3>
+<pre><code class="language-hcl">variable &quot;region&quot; {
+  description = &quot;The AWS region to deploy the instance.&quot;
+  default     = &quot;us-east-1&quot;
+}
+</code></pre>
+<p>Este arquivo define uma variável para a região AWS, permitindo que você altere a região sem modificar diretamente o arquivo main.tf.</p>
+<h3 id="conteudo-do-arquivo-outputstf-opcional">Conteúdo do Arquivo outputs.tf (Opcional)</h3>
+<pre><code class="language-hcl">output &quot;instance_id&quot; {
+  description = &quot;The ID of the EC2 instance.&quot;
+  value       = aws_instance.example.id
+}
+
+output &quot;instance_public_ip&quot; {
+  description = &quot;The public IP address of the EC2 instance.&quot;
+  value       = aws_instance.example.public_ip
+}
+</code></pre>
+<p>Este arquivo define saídas para o ID e o endereço IP público da instância EC2, facilitando a obtenção dessas informações após a criação da instância.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -338,10 +563,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
